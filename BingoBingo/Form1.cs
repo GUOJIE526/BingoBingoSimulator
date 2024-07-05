@@ -21,7 +21,6 @@ namespace BingoBingo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblDatetime.Text = new DateTime(2024, 08, 08, 21, 30, 00).ToString();
             listNums.Add(lbl1);
             listNums.Add(lbl2);
             listNums.Add(lbl3);
@@ -92,6 +91,7 @@ namespace BingoBingo
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            lblDatetime.Text = DateTime.Now.ToString();
             //開獎
             List<int> numbers = new List<int>();
             Random random = new Random();
