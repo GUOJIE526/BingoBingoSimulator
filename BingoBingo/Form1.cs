@@ -43,10 +43,10 @@ namespace BingoBingo
             listNums.Add(lbl20);
         }
 
-        private void btnNum_Click(object sender, EventArgs e)
+        string RandNum()
         {
-            List<int> numbers = new List<int>();
             Random random = new Random();
+            List<int> numbers = new List<int>();
             while (numbers.Count < 10)
             {
                 int Num = random.Next(1, 81);
@@ -55,33 +55,26 @@ namespace BingoBingo
                     numbers.Add(Num);
                 }
             }
-            txtNum.Text = string.Join(",", numbers);
+
+            List<string> formatNum = new List<string>();
+            foreach(int num in numbers)
+            {
+                formatNum.Add(num.ToString("D2"));
+            }
+
+            return string.Join(", ", formatNum);
+        }
+
+        private void btnNum_Click(object sender, EventArgs e)
+        {
+            string strNum = RandNum();
+            txtNum.Text = strNum;
         }
 
         private void btnAddNum_Click(object sender, EventArgs e)
         {
             選號紀錄.Items.Add(txtNum.Text);
             txtNum.Text = "";
-        }
-
-        private void btn100_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn500_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn1000_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn5000_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -103,7 +96,8 @@ namespace BingoBingo
                     numbers.Add(Num);
                     for (int i = 0; i < numbers.Count; i++)
                     {
-                        listNums[i].Text = numbers[i].ToString();
+                        listNums[i].Text = numbers[i].ToString("D2");
+                        lbl20.BackColor = Color.Gold;
                     }
                 }
             }
@@ -165,7 +159,7 @@ namespace BingoBingo
             }
             else
             {
-                lblOddEven.Text = "X";
+                lblOddEven.Text = "一";
             }
         }
 
@@ -178,6 +172,32 @@ namespace BingoBingo
             {
                 listNums[i].Text = "";
             }
+            lbl20.BackColor = Color.LightBlue;
+        }
+
+        private void btnBig_Click(object sender, EventArgs e)
+        {
+            大小單雙.Items.Add("大");
+        }
+
+        private void btnSmall_Click(object sender, EventArgs e)
+        {
+            大小單雙.Items.Add("小");
+        }
+
+        private void btnOdd_Click(object sender, EventArgs e)
+        {
+            大小單雙.Items.Add("單");
+        }
+
+        private void btnEven_Click(object sender, EventArgs e)
+        {
+            大小單雙.Items.Add("雙");
+        }
+
+        private void btnDetele3_Click(object sender, EventArgs e)
+        {
+            大小單雙.Items.Clear();
         }
     }
 }

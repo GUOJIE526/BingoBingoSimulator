@@ -56,10 +56,6 @@
             this.btnNum = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAddNum = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btn100 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn500 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn1000 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn5000 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblWin = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtNum = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -92,6 +88,12 @@
             this.lbl19 = new System.Windows.Forms.Label();
             this.lbl20 = new System.Windows.Forms.Label();
             this.lblOddEven = new System.Windows.Forms.Label();
+            this.btnBig = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnSmall = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnEven = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnOdd = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.大小單雙 = new System.Windows.Forms.ListBox();
+            this.btnDetele3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -102,10 +104,11 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.IndianRed;
             this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.guna2HtmlLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(39, 12);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(36, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(948, 415);
             this.guna2HtmlLabel1.TabIndex = 0;
+            this.guna2HtmlLabel1.Text = null;
             // 
             // guna2ImageButton1
             // 
@@ -321,6 +324,7 @@
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(520, 85);
             this.guna2HtmlLabel3.TabIndex = 16;
+            this.guna2HtmlLabel3.Text = null;
             // 
             // lbl333
             // 
@@ -340,7 +344,7 @@
             this.lbl1111.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl1111.Location = new System.Drawing.Point(664, 329);
             this.lbl1111.Name = "lbl1111";
-            this.lbl1111.Size = new System.Drawing.Size(51, 22);
+            this.lbl1111.Size = new System.Drawing.Size(51, 23);
             this.lbl1111.TabIndex = 18;
             this.lbl1111.Text = "猜大小";
             this.lbl1111.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -395,7 +399,7 @@
             this.lblDatetime.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblDatetime.Location = new System.Drawing.Point(236, 242);
             this.lblDatetime.Name = "lblDatetime";
-            this.lblDatetime.Size = new System.Drawing.Size(139, 22);
+            this.lblDatetime.Size = new System.Drawing.Size(139, 23);
             this.lblDatetime.TabIndex = 23;
             this.lblDatetime.Text = "0000,00,00,00,00";
             // 
@@ -463,95 +467,21 @@
             this.guna2GroupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.BorderRadius = 20;
-            this.guna2GroupBox1.Controls.Add(this.btn5000);
-            this.guna2GroupBox1.Controls.Add(this.btn1000);
-            this.guna2GroupBox1.Controls.Add(this.btn500);
-            this.guna2GroupBox1.Controls.Add(this.btn100);
+            this.guna2GroupBox1.Controls.Add(this.btnDetele3);
+            this.guna2GroupBox1.Controls.Add(this.大小單雙);
+            this.guna2GroupBox1.Controls.Add(this.btnOdd);
+            this.guna2GroupBox1.Controls.Add(this.btnEven);
+            this.guna2GroupBox1.Controls.Add(this.btnSmall);
+            this.guna2GroupBox1.Controls.Add(this.btnBig);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Khaki;
             this.guna2GroupBox1.FillColor = System.Drawing.SystemColors.InactiveCaption;
             this.guna2GroupBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(362, 454);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(361, 454);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(265, 167);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(320, 211);
             this.guna2GroupBox1.TabIndex = 28;
-            this.guna2GroupBox1.Text = "電腦包牌";
-            // 
-            // btn100
-            // 
-            this.btn100.BorderRadius = 15;
-            this.btn100.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn100.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn100.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn100.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn100.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn100.FillColor = System.Drawing.Color.Firebrick;
-            this.btn100.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn100.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btn100.ForeColor = System.Drawing.Color.White;
-            this.btn100.Location = new System.Drawing.Point(18, 64);
-            this.btn100.Name = "btn100";
-            this.btn100.Size = new System.Drawing.Size(102, 43);
-            this.btn100.TabIndex = 29;
-            this.btn100.Text = "100元";
-            this.btn100.Click += new System.EventHandler(this.btn100_Click);
-            // 
-            // btn500
-            // 
-            this.btn500.BorderRadius = 15;
-            this.btn500.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn500.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn500.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn500.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn500.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn500.FillColor = System.Drawing.Color.Firebrick;
-            this.btn500.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn500.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btn500.ForeColor = System.Drawing.Color.White;
-            this.btn500.Location = new System.Drawing.Point(145, 64);
-            this.btn500.Name = "btn500";
-            this.btn500.Size = new System.Drawing.Size(102, 43);
-            this.btn500.TabIndex = 30;
-            this.btn500.Text = "500元";
-            this.btn500.Click += new System.EventHandler(this.btn500_Click);
-            // 
-            // btn1000
-            // 
-            this.btn1000.BorderRadius = 15;
-            this.btn1000.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn1000.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn1000.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn1000.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn1000.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn1000.FillColor = System.Drawing.Color.Firebrick;
-            this.btn1000.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn1000.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btn1000.ForeColor = System.Drawing.Color.White;
-            this.btn1000.Location = new System.Drawing.Point(18, 113);
-            this.btn1000.Name = "btn1000";
-            this.btn1000.Size = new System.Drawing.Size(102, 43);
-            this.btn1000.TabIndex = 31;
-            this.btn1000.Text = "1000元";
-            this.btn1000.Click += new System.EventHandler(this.btn1000_Click);
-            // 
-            // btn5000
-            // 
-            this.btn5000.BorderRadius = 15;
-            this.btn5000.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn5000.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn5000.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn5000.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn5000.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn5000.FillColor = System.Drawing.Color.Firebrick;
-            this.btn5000.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn5000.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btn5000.ForeColor = System.Drawing.Color.White;
-            this.btn5000.Location = new System.Drawing.Point(145, 113);
-            this.btn5000.Name = "btn5000";
-            this.btn5000.Size = new System.Drawing.Size(102, 43);
-            this.btn5000.TabIndex = 32;
-            this.btn5000.Text = "5000元";
-            this.btn5000.Click += new System.EventHandler(this.btn5000_Click);
+            this.guna2GroupBox1.Text = "猜大小、猜單雙";
             // 
             // groupBox1
             // 
@@ -559,7 +489,7 @@
             this.groupBox1.Controls.Add(this.lblTotalCost);
             this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(698, 454);
+            this.groupBox1.Location = new System.Drawing.Point(708, 481);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(276, 167);
             this.groupBox1.TabIndex = 29;
@@ -571,7 +501,7 @@
             this.lblWin.BackColor = System.Drawing.Color.Transparent;
             this.lblWin.Location = new System.Drawing.Point(33, 113);
             this.lblWin.Name = "lblWin";
-            this.lblWin.Size = new System.Drawing.Size(35, 23);
+            this.lblWin.Size = new System.Drawing.Size(27, 14);
             this.lblWin.TabIndex = 26;
             this.lblWin.Text = "兌獎";
             // 
@@ -646,6 +576,7 @@
             this.lblSuper.Name = "lblSuper";
             this.lblSuper.Size = new System.Drawing.Size(57, 26);
             this.lblSuper.TabIndex = 36;
+            this.lblSuper.Text = null;
             this.lblSuper.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDelete2
@@ -678,6 +609,7 @@
             this.lblBigSmall.Name = "lblBigSmall";
             this.lblBigSmall.Size = new System.Drawing.Size(57, 26);
             this.lblBigSmall.TabIndex = 38;
+            this.lblBigSmall.Text = null;
             this.lblBigSmall.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel6
@@ -693,6 +625,7 @@
             // 
             // lbl1
             // 
+            this.lbl1.BackColor = System.Drawing.Color.LightBlue;
             this.lbl1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl1.Location = new System.Drawing.Point(449, 123);
@@ -710,9 +643,11 @@
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(741, 373);
             this.guna2HtmlLabel2.TabIndex = 1;
+            this.guna2HtmlLabel2.Text = null;
             // 
             // lbl2
             // 
+            this.lbl2.BackColor = System.Drawing.Color.LightBlue;
             this.lbl2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl2.Location = new System.Drawing.Point(500, 123);
@@ -723,6 +658,7 @@
             // 
             // lbl3
             // 
+            this.lbl3.BackColor = System.Drawing.Color.LightBlue;
             this.lbl3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl3.Location = new System.Drawing.Point(551, 123);
@@ -733,6 +669,7 @@
             // 
             // lbl4
             // 
+            this.lbl4.BackColor = System.Drawing.Color.LightBlue;
             this.lbl4.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl4.Location = new System.Drawing.Point(602, 123);
@@ -743,6 +680,7 @@
             // 
             // lbl7
             // 
+            this.lbl7.BackColor = System.Drawing.Color.LightBlue;
             this.lbl7.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl7.Location = new System.Drawing.Point(755, 123);
@@ -753,6 +691,7 @@
             // 
             // lbl5
             // 
+            this.lbl5.BackColor = System.Drawing.Color.LightBlue;
             this.lbl5.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl5.Location = new System.Drawing.Point(653, 123);
@@ -763,6 +702,7 @@
             // 
             // lbl6
             // 
+            this.lbl6.BackColor = System.Drawing.Color.LightBlue;
             this.lbl6.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl6.Location = new System.Drawing.Point(704, 123);
@@ -773,6 +713,7 @@
             // 
             // lbl8
             // 
+            this.lbl8.BackColor = System.Drawing.Color.LightBlue;
             this.lbl8.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl8.Location = new System.Drawing.Point(806, 123);
@@ -783,6 +724,7 @@
             // 
             // lbl9
             // 
+            this.lbl9.BackColor = System.Drawing.Color.LightBlue;
             this.lbl9.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl9.Location = new System.Drawing.Point(857, 123);
@@ -793,6 +735,7 @@
             // 
             // lbl10
             // 
+            this.lbl10.BackColor = System.Drawing.Color.LightBlue;
             this.lbl10.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl10.Location = new System.Drawing.Point(908, 123);
@@ -803,6 +746,7 @@
             // 
             // lbl11
             // 
+            this.lbl11.BackColor = System.Drawing.Color.LightBlue;
             this.lbl11.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl11.Location = new System.Drawing.Point(449, 169);
@@ -813,6 +757,7 @@
             // 
             // lbl12
             // 
+            this.lbl12.BackColor = System.Drawing.Color.LightBlue;
             this.lbl12.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl12.Location = new System.Drawing.Point(500, 169);
@@ -823,6 +768,7 @@
             // 
             // lbl13
             // 
+            this.lbl13.BackColor = System.Drawing.Color.LightBlue;
             this.lbl13.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl13.Location = new System.Drawing.Point(551, 169);
@@ -833,6 +779,7 @@
             // 
             // lbl14
             // 
+            this.lbl14.BackColor = System.Drawing.Color.LightBlue;
             this.lbl14.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl14.Location = new System.Drawing.Point(602, 169);
@@ -843,6 +790,7 @@
             // 
             // lbl17
             // 
+            this.lbl17.BackColor = System.Drawing.Color.LightBlue;
             this.lbl17.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl17.Location = new System.Drawing.Point(755, 169);
@@ -853,6 +801,7 @@
             // 
             // lbl15
             // 
+            this.lbl15.BackColor = System.Drawing.Color.LightBlue;
             this.lbl15.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl15.Location = new System.Drawing.Point(653, 169);
@@ -863,6 +812,7 @@
             // 
             // lbl16
             // 
+            this.lbl16.BackColor = System.Drawing.Color.LightBlue;
             this.lbl16.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl16.Location = new System.Drawing.Point(704, 169);
@@ -873,6 +823,7 @@
             // 
             // lbl18
             // 
+            this.lbl18.BackColor = System.Drawing.Color.LightBlue;
             this.lbl18.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl18.Location = new System.Drawing.Point(806, 169);
@@ -883,6 +834,7 @@
             // 
             // lbl19
             // 
+            this.lbl19.BackColor = System.Drawing.Color.LightBlue;
             this.lbl19.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl19.Location = new System.Drawing.Point(857, 169);
@@ -893,6 +845,7 @@
             // 
             // lbl20
             // 
+            this.lbl20.BackColor = System.Drawing.Color.LightBlue;
             this.lbl20.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl20.Location = new System.Drawing.Point(908, 169);
@@ -911,6 +864,104 @@
             this.lblOddEven.Size = new System.Drawing.Size(48, 35);
             this.lblOddEven.TabIndex = 58;
             this.lblOddEven.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnBig
+            // 
+            this.btnBig.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBig.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBig.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBig.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBig.FillColor = System.Drawing.Color.Firebrick;
+            this.btnBig.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnBig.ForeColor = System.Drawing.Color.White;
+            this.btnBig.Location = new System.Drawing.Point(160, 51);
+            this.btnBig.Name = "btnBig";
+            this.btnBig.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBig.Size = new System.Drawing.Size(55, 53);
+            this.btnBig.TabIndex = 0;
+            this.btnBig.Text = "大";
+            this.btnBig.Click += new System.EventHandler(this.btnBig_Click);
+            // 
+            // btnSmall
+            // 
+            this.btnSmall.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSmall.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSmall.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSmall.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSmall.FillColor = System.Drawing.Color.Firebrick;
+            this.btnSmall.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSmall.ForeColor = System.Drawing.Color.White;
+            this.btnSmall.Location = new System.Drawing.Point(231, 51);
+            this.btnSmall.Name = "btnSmall";
+            this.btnSmall.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnSmall.Size = new System.Drawing.Size(55, 53);
+            this.btnSmall.TabIndex = 1;
+            this.btnSmall.Text = "小";
+            this.btnSmall.Click += new System.EventHandler(this.btnSmall_Click);
+            // 
+            // btnEven
+            // 
+            this.btnEven.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEven.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEven.FillColor = System.Drawing.Color.Firebrick;
+            this.btnEven.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnEven.ForeColor = System.Drawing.Color.White;
+            this.btnEven.Location = new System.Drawing.Point(231, 114);
+            this.btnEven.Name = "btnEven";
+            this.btnEven.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnEven.Size = new System.Drawing.Size(55, 53);
+            this.btnEven.TabIndex = 2;
+            this.btnEven.Text = "雙";
+            this.btnEven.Click += new System.EventHandler(this.btnEven_Click);
+            // 
+            // btnOdd
+            // 
+            this.btnOdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOdd.FillColor = System.Drawing.Color.Firebrick;
+            this.btnOdd.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnOdd.ForeColor = System.Drawing.Color.White;
+            this.btnOdd.Location = new System.Drawing.Point(160, 114);
+            this.btnOdd.Name = "btnOdd";
+            this.btnOdd.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnOdd.Size = new System.Drawing.Size(55, 53);
+            this.btnOdd.TabIndex = 3;
+            this.btnOdd.Text = "單";
+            this.btnOdd.Click += new System.EventHandler(this.btnOdd_Click);
+            // 
+            // 大小單雙
+            // 
+            this.大小單雙.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.大小單雙.ForeColor = System.Drawing.Color.White;
+            this.大小單雙.FormattingEnabled = true;
+            this.大小單雙.ItemHeight = 21;
+            this.大小單雙.Location = new System.Drawing.Point(31, 66);
+            this.大小單雙.Name = "大小單雙";
+            this.大小單雙.Size = new System.Drawing.Size(102, 88);
+            this.大小單雙.TabIndex = 4;
+            // 
+            // btnDetele3
+            // 
+            this.btnDetele3.BorderRadius = 15;
+            this.btnDetele3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetele3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetele3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDetele3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDetele3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDetele3.FillColor = System.Drawing.Color.Firebrick;
+            this.btnDetele3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDetele3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnDetele3.ForeColor = System.Drawing.Color.White;
+            this.btnDetele3.Location = new System.Drawing.Point(44, 160);
+            this.btnDetele3.Name = "btnDetele3";
+            this.btnDetele3.Size = new System.Drawing.Size(77, 43);
+            this.btnDetele3.TabIndex = 59;
+            this.btnDetele3.Text = "刪除";
+            this.btnDetele3.Click += new System.EventHandler(this.btnDetele3_Click);
             // 
             // Form1
             // 
@@ -1015,10 +1066,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnNum;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddNum;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton btn100;
-        private Guna.UI2.WinForms.Guna2GradientButton btn5000;
-        private Guna.UI2.WinForms.Guna2GradientButton btn1000;
-        private Guna.UI2.WinForms.Guna2GradientButton btn500;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblWin;
         private Guna.UI2.WinForms.Guna2HtmlLabel txtNum;
@@ -1051,6 +1098,12 @@
         private System.Windows.Forms.Label lbl19;
         private System.Windows.Forms.Label lbl20;
         private System.Windows.Forms.Label lblOddEven;
+        private Guna.UI2.WinForms.Guna2CircleButton btnBig;
+        private Guna.UI2.WinForms.Guna2CircleButton btnSmall;
+        private System.Windows.Forms.ListBox 大小單雙;
+        private Guna.UI2.WinForms.Guna2CircleButton btnOdd;
+        private Guna.UI2.WinForms.Guna2CircleButton btnEven;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDetele3;
     }
 }
 
