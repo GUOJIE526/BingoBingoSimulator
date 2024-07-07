@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnWelcom = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -47,17 +47,23 @@
             this.lbl333 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl1111 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblOdd = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl期數 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDatetime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.選號紀錄 = new System.Windows.Forms.ListBox();
-            this.lblTotalCost = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbltotal = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnNum = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAddNum = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDetele3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.大小單雙 = new System.Windows.Forms.ListBox();
+            this.btnOdd = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnEven = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnSmall = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnBig = new Guna.UI2.WinForms.Guna2CircleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblWin = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblwin = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtNum = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnStart = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -88,12 +94,8 @@
             this.lbl19 = new System.Windows.Forms.Label();
             this.lbl20 = new System.Windows.Forms.Label();
             this.lblOddEven = new System.Windows.Forms.Label();
-            this.btnBig = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnSmall = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnEven = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnOdd = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.大小單雙 = new System.Windows.Forms.ListBox();
-            this.btnDetele3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lblTotalCost = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblWinMoney = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -110,19 +112,21 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = null;
             // 
-            // guna2ImageButton1
+            // btnWelcom
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(80, 80);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(80, 169);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(85, 70);
-            this.guna2ImageButton1.TabIndex = 2;
+            this.btnWelcom.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnWelcom.HoverState.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
+            this.btnWelcom.HoverState.ImageRotate = 360F;
+            this.btnWelcom.HoverState.ImageSize = new System.Drawing.Size(100, 100);
+            this.btnWelcom.Image = ((System.Drawing.Image)(resources.GetObject("btnWelcom.Image")));
+            this.btnWelcom.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnWelcom.ImageRotate = 0F;
+            this.btnWelcom.ImageSize = new System.Drawing.Size(80, 80);
+            this.btnWelcom.Location = new System.Drawing.Point(80, 169);
+            this.btnWelcom.Name = "btnWelcom";
+            this.btnWelcom.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnWelcom.Size = new System.Drawing.Size(85, 70);
+            this.btnWelcom.TabIndex = 2;
             // 
             // guna2CircleButton1
             // 
@@ -361,15 +365,15 @@
             this.lblOdd.Text = "猜單雙";
             this.lblOdd.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // guna2HtmlLabel4
+            // lbl期數
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(236, 137);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(125, 23);
-            this.guna2HtmlLabel4.TabIndex = 20;
-            this.guna2HtmlLabel4.Text = "第113037906期";
+            this.lbl期數.BackColor = System.Drawing.Color.White;
+            this.lbl期數.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl期數.Location = new System.Drawing.Point(236, 137);
+            this.lbl期數.Name = "lbl期數";
+            this.lbl期數.Size = new System.Drawing.Size(125, 23);
+            this.lbl期數.TabIndex = 20;
+            this.lbl期數.Text = "第000000000期";
             // 
             // label1
             // 
@@ -414,15 +418,15 @@
             this.選號紀錄.Size = new System.Drawing.Size(292, 151);
             this.選號紀錄.TabIndex = 24;
             // 
-            // lblTotalCost
+            // lbltotal
             // 
-            this.lblTotalCost.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalCost.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblTotalCost.Location = new System.Drawing.Point(33, 39);
-            this.lblTotalCost.Name = "lblTotalCost";
-            this.lblTotalCost.Size = new System.Drawing.Size(35, 23);
-            this.lblTotalCost.TabIndex = 25;
-            this.lblTotalCost.Text = "總價";
+            this.lbltotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbltotal.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbltotal.Location = new System.Drawing.Point(33, 39);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(39, 23);
+            this.lbltotal.TabIndex = 25;
+            this.lbltotal.Text = "總價:";
             // 
             // btnNum
             // 
@@ -483,10 +487,110 @@
             this.guna2GroupBox1.TabIndex = 28;
             this.guna2GroupBox1.Text = "猜大小、猜單雙";
             // 
+            // btnDetele3
+            // 
+            this.btnDetele3.BorderRadius = 15;
+            this.btnDetele3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetele3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetele3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDetele3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDetele3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDetele3.FillColor = System.Drawing.Color.Firebrick;
+            this.btnDetele3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDetele3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnDetele3.ForeColor = System.Drawing.Color.White;
+            this.btnDetele3.Location = new System.Drawing.Point(44, 160);
+            this.btnDetele3.Name = "btnDetele3";
+            this.btnDetele3.Size = new System.Drawing.Size(77, 43);
+            this.btnDetele3.TabIndex = 59;
+            this.btnDetele3.Text = "刪除";
+            this.btnDetele3.Click += new System.EventHandler(this.btnDetele3_Click);
+            // 
+            // 大小單雙
+            // 
+            this.大小單雙.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.大小單雙.ForeColor = System.Drawing.Color.White;
+            this.大小單雙.FormattingEnabled = true;
+            this.大小單雙.ItemHeight = 21;
+            this.大小單雙.Location = new System.Drawing.Point(31, 66);
+            this.大小單雙.Name = "大小單雙";
+            this.大小單雙.Size = new System.Drawing.Size(102, 88);
+            this.大小單雙.TabIndex = 4;
+            // 
+            // btnOdd
+            // 
+            this.btnOdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOdd.FillColor = System.Drawing.Color.Firebrick;
+            this.btnOdd.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnOdd.ForeColor = System.Drawing.Color.White;
+            this.btnOdd.Location = new System.Drawing.Point(160, 114);
+            this.btnOdd.Name = "btnOdd";
+            this.btnOdd.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnOdd.Size = new System.Drawing.Size(55, 53);
+            this.btnOdd.TabIndex = 3;
+            this.btnOdd.Text = "單";
+            this.btnOdd.Click += new System.EventHandler(this.btnOdd_Click);
+            // 
+            // btnEven
+            // 
+            this.btnEven.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEven.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEven.FillColor = System.Drawing.Color.Firebrick;
+            this.btnEven.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnEven.ForeColor = System.Drawing.Color.White;
+            this.btnEven.Location = new System.Drawing.Point(231, 114);
+            this.btnEven.Name = "btnEven";
+            this.btnEven.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnEven.Size = new System.Drawing.Size(55, 53);
+            this.btnEven.TabIndex = 2;
+            this.btnEven.Text = "雙";
+            this.btnEven.Click += new System.EventHandler(this.btnEven_Click);
+            // 
+            // btnSmall
+            // 
+            this.btnSmall.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSmall.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSmall.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSmall.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSmall.FillColor = System.Drawing.Color.Firebrick;
+            this.btnSmall.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSmall.ForeColor = System.Drawing.Color.White;
+            this.btnSmall.Location = new System.Drawing.Point(231, 51);
+            this.btnSmall.Name = "btnSmall";
+            this.btnSmall.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnSmall.Size = new System.Drawing.Size(55, 53);
+            this.btnSmall.TabIndex = 1;
+            this.btnSmall.Text = "小";
+            this.btnSmall.Click += new System.EventHandler(this.btnSmall_Click);
+            // 
+            // btnBig
+            // 
+            this.btnBig.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBig.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBig.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBig.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBig.FillColor = System.Drawing.Color.Firebrick;
+            this.btnBig.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnBig.ForeColor = System.Drawing.Color.White;
+            this.btnBig.Location = new System.Drawing.Point(160, 51);
+            this.btnBig.Name = "btnBig";
+            this.btnBig.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBig.Size = new System.Drawing.Size(55, 53);
+            this.btnBig.TabIndex = 0;
+            this.btnBig.Text = "大";
+            this.btnBig.Click += new System.EventHandler(this.btnBig_Click);
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblWin);
+            this.groupBox1.Controls.Add(this.lblWinMoney);
             this.groupBox1.Controls.Add(this.lblTotalCost);
+            this.groupBox1.Controls.Add(this.lblwin);
+            this.groupBox1.Controls.Add(this.lbltotal);
             this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(708, 481);
@@ -496,14 +600,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "收銀";
             // 
-            // lblWin
+            // lblwin
             // 
-            this.lblWin.BackColor = System.Drawing.Color.Transparent;
-            this.lblWin.Location = new System.Drawing.Point(33, 113);
-            this.lblWin.Name = "lblWin";
-            this.lblWin.Size = new System.Drawing.Size(27, 14);
-            this.lblWin.TabIndex = 26;
-            this.lblWin.Text = "兌獎";
+            this.lblwin.BackColor = System.Drawing.Color.Transparent;
+            this.lblwin.Location = new System.Drawing.Point(33, 113);
+            this.lblwin.Name = "lblwin";
+            this.lblwin.Size = new System.Drawing.Size(27, 14);
+            this.lblwin.TabIndex = 26;
+            this.lblwin.Text = "兌獎";
             // 
             // txtNum
             // 
@@ -865,103 +969,25 @@
             this.lblOddEven.TabIndex = 58;
             this.lblOddEven.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnBig
+            // lblTotalCost
             // 
-            this.btnBig.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBig.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBig.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBig.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBig.FillColor = System.Drawing.Color.Firebrick;
-            this.btnBig.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnBig.ForeColor = System.Drawing.Color.White;
-            this.btnBig.Location = new System.Drawing.Point(160, 51);
-            this.btnBig.Name = "btnBig";
-            this.btnBig.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnBig.Size = new System.Drawing.Size(55, 53);
-            this.btnBig.TabIndex = 0;
-            this.btnBig.Text = "大";
-            this.btnBig.Click += new System.EventHandler(this.btnBig_Click);
+            this.lblTotalCost.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalCost.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblTotalCost.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTotalCost.Location = new System.Drawing.Point(111, 39);
+            this.lblTotalCost.Name = "lblTotalCost";
+            this.lblTotalCost.Size = new System.Drawing.Size(49, 23);
+            this.lblTotalCost.TabIndex = 27;
+            this.lblTotalCost.Text = "NT$ 0";
             // 
-            // btnSmall
+            // lblWinMoney
             // 
-            this.btnSmall.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSmall.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSmall.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSmall.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSmall.FillColor = System.Drawing.Color.Firebrick;
-            this.btnSmall.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnSmall.ForeColor = System.Drawing.Color.White;
-            this.btnSmall.Location = new System.Drawing.Point(231, 51);
-            this.btnSmall.Name = "btnSmall";
-            this.btnSmall.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnSmall.Size = new System.Drawing.Size(55, 53);
-            this.btnSmall.TabIndex = 1;
-            this.btnSmall.Text = "小";
-            this.btnSmall.Click += new System.EventHandler(this.btnSmall_Click);
-            // 
-            // btnEven
-            // 
-            this.btnEven.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEven.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEven.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEven.FillColor = System.Drawing.Color.Firebrick;
-            this.btnEven.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnEven.ForeColor = System.Drawing.Color.White;
-            this.btnEven.Location = new System.Drawing.Point(231, 114);
-            this.btnEven.Name = "btnEven";
-            this.btnEven.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnEven.Size = new System.Drawing.Size(55, 53);
-            this.btnEven.TabIndex = 2;
-            this.btnEven.Text = "雙";
-            this.btnEven.Click += new System.EventHandler(this.btnEven_Click);
-            // 
-            // btnOdd
-            // 
-            this.btnOdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOdd.FillColor = System.Drawing.Color.Firebrick;
-            this.btnOdd.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnOdd.ForeColor = System.Drawing.Color.White;
-            this.btnOdd.Location = new System.Drawing.Point(160, 114);
-            this.btnOdd.Name = "btnOdd";
-            this.btnOdd.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnOdd.Size = new System.Drawing.Size(55, 53);
-            this.btnOdd.TabIndex = 3;
-            this.btnOdd.Text = "單";
-            this.btnOdd.Click += new System.EventHandler(this.btnOdd_Click);
-            // 
-            // 大小單雙
-            // 
-            this.大小單雙.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.大小單雙.ForeColor = System.Drawing.Color.White;
-            this.大小單雙.FormattingEnabled = true;
-            this.大小單雙.ItemHeight = 21;
-            this.大小單雙.Location = new System.Drawing.Point(31, 66);
-            this.大小單雙.Name = "大小單雙";
-            this.大小單雙.Size = new System.Drawing.Size(102, 88);
-            this.大小單雙.TabIndex = 4;
-            // 
-            // btnDetele3
-            // 
-            this.btnDetele3.BorderRadius = 15;
-            this.btnDetele3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDetele3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDetele3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDetele3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDetele3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDetele3.FillColor = System.Drawing.Color.Firebrick;
-            this.btnDetele3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDetele3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnDetele3.ForeColor = System.Drawing.Color.White;
-            this.btnDetele3.Location = new System.Drawing.Point(44, 160);
-            this.btnDetele3.Name = "btnDetele3";
-            this.btnDetele3.Size = new System.Drawing.Size(77, 43);
-            this.btnDetele3.TabIndex = 59;
-            this.btnDetele3.Text = "刪除";
-            this.btnDetele3.Click += new System.EventHandler(this.btnDetele3_Click);
+            this.lblWinMoney.BackColor = System.Drawing.Color.Transparent;
+            this.lblWinMoney.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblWinMoney.Location = new System.Drawing.Point(111, 104);
+            this.lblWinMoney.Name = "lblWinMoney";
+            this.lblWinMoney.Size = new System.Drawing.Size(3, 2);
+            this.lblWinMoney.TabIndex = 28;
             // 
             // Form1
             // 
@@ -1006,7 +1032,7 @@
             this.Controls.Add(this.lblDatetime);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2HtmlLabel4);
+            this.Controls.Add(this.lbl期數);
             this.Controls.Add(this.lblOdd);
             this.Controls.Add(this.lbl1111);
             this.Controls.Add(this.lbl333);
@@ -1023,7 +1049,7 @@
             this.Controls.Add(this.guna2CircleButton3);
             this.Controls.Add(this.guna2CircleButton2);
             this.Controls.Add(this.guna2CircleButton1);
-            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.btnWelcom);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "Form1";
@@ -1040,7 +1066,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnWelcom;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
@@ -1057,17 +1083,17 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl333;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl1111;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblOdd;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl期數;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDatetime;
         private System.Windows.Forms.ListBox 選號紀錄;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalCost;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbltotal;
         private Guna.UI2.WinForms.Guna2GradientButton btnNum;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddNum;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblWin;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblwin;
         private Guna.UI2.WinForms.Guna2HtmlLabel txtNum;
         private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnStart;
@@ -1104,6 +1130,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnOdd;
         private Guna.UI2.WinForms.Guna2CircleButton btnEven;
         private Guna.UI2.WinForms.Guna2GradientButton btnDetele3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalCost;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblWinMoney;
     }
 }
 

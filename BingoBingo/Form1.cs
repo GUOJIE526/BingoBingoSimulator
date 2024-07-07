@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace BingoBingo
 {
-
     public partial class Form1 : Form
     {
+        int total = 0;//總價
+        int count = 0;//類別變數期數+1
         List<Label> listNums = new List<Label>();
         public Form1()
         {
@@ -43,6 +44,10 @@ namespace BingoBingo
             listNums.Add(lbl20);
         }
 
+        int TotalCost()//總價
+        {
+            return total += 25;
+        }
         string RandNum()
         {
             Random random = new Random();
@@ -73,12 +78,15 @@ namespace BingoBingo
 
         private void btnAddNum_Click(object sender, EventArgs e)
         {
+            int newTotal = TotalCost();
+            lblTotalCost.Text = newTotal.ToString("C");
             選號紀錄.Items.Add(txtNum.Text);
             txtNum.Text = "";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            lblTotalCost.Text = "NT$ 0";
             選號紀錄.Items.Clear();
         }
 
@@ -94,13 +102,16 @@ namespace BingoBingo
                 if (!numbers.Contains(Num))
                 {
                     numbers.Add(Num);
-                    for (int i = 0; i < numbers.Count; i++)
-                    {
-                        listNums[i].Text = numbers[i].ToString("D2");
-                        lbl20.BackColor = Color.Gold;
-                    }
                 }
             }
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                listNums[i].Text = numbers[i].ToString("D2");
+                lbl20.BackColor = Color.Gold;
+            }
+            count++;
+            lbl期數.Text = $"第{count:D9}期";
+
             //Super Number
             for (int i = 0; i < numbers.Count; i++)
             {
@@ -177,22 +188,58 @@ namespace BingoBingo
 
         private void btnBig_Click(object sender, EventArgs e)
         {
-            大小單雙.Items.Add("大");
+            if (大小單雙.Items.Contains("小"))
+            {
+                MessageBox.Show("已下注 \'小\' ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int newTotal = TotalCost();
+                lblTotalCost.Text = newTotal.ToString("C");
+                大小單雙.Items.Add("大");
+            }
         }
 
         private void btnSmall_Click(object sender, EventArgs e)
         {
-            大小單雙.Items.Add("小");
+            if (大小單雙.Items.Contains("大"))
+            {
+                MessageBox.Show("已下注 \'大\' ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int newTotal = TotalCost();
+                lblTotalCost.Text = newTotal.ToString("C");
+                大小單雙.Items.Add("小");
+            }
         }
 
         private void btnOdd_Click(object sender, EventArgs e)
         {
-            大小單雙.Items.Add("單");
+            if (大小單雙.Items.Contains("雙"))
+            {
+                MessageBox.Show("已下注 \'雙\' ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int newTotal = TotalCost();
+                lblTotalCost.Text = newTotal.ToString("C");
+                大小單雙.Items.Add("單");
+            }
         }
 
         private void btnEven_Click(object sender, EventArgs e)
         {
-            大小單雙.Items.Add("雙");
+            if (大小單雙.Items.Contains("單"))
+            {
+                MessageBox.Show("已下注 \'單\' ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int newTotal = TotalCost();
+                lblTotalCost.Text = newTotal.ToString("C");
+                大小單雙.Items.Add("雙");
+            }
         }
 
         private void btnDetele3_Click(object sender, EventArgs e)
