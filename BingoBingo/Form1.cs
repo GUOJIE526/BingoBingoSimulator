@@ -78,10 +78,17 @@ namespace BingoBingo
 
         private void btnAddNum_Click(object sender, EventArgs e)
         {
-            int newTotal = TotalCost();
-            lblTotalCost.Text = newTotal.ToString("C");
-            選號紀錄.Items.Add(txtNum.Text);
-            txtNum.Text = "";
+            if (txtNum.Text != "")
+            {
+                int newTotal = TotalCost();
+                lblTotalCost.Text = newTotal.ToString("C");
+                選號紀錄.Items.Add(txtNum.Text);
+                txtNum.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("尚未選號", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -176,6 +183,8 @@ namespace BingoBingo
 
         private void btnDelete2_Click(object sender, EventArgs e)
         {
+            lblTotalCost.Text = "NT$ 0";
+            選號紀錄.Items.Clear();
             lblSuper.Text = "";
             lblOddEven.Text = "";
             lblBigSmall.Text = "";
@@ -188,7 +197,7 @@ namespace BingoBingo
 
         private void btnBig_Click(object sender, EventArgs e)
         {
-            if (大小單雙.Items.Contains("小"))
+            if (大小單雙.Items.Contains('小'))
             {
                 MessageBox.Show("已下注 \'小\' ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -196,13 +205,13 @@ namespace BingoBingo
             {
                 int newTotal = TotalCost();
                 lblTotalCost.Text = newTotal.ToString("C");
-                大小單雙.Items.Add("大");
+                大小單雙.Items.Add('大');
             }
         }
 
         private void btnSmall_Click(object sender, EventArgs e)
         {
-            if (大小單雙.Items.Contains("大"))
+            if (大小單雙.Items.Contains('大'))
             {
                 MessageBox.Show("已下注 \'大\' ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -210,13 +219,13 @@ namespace BingoBingo
             {
                 int newTotal = TotalCost();
                 lblTotalCost.Text = newTotal.ToString("C");
-                大小單雙.Items.Add("小");
+                大小單雙.Items.Add('小');
             }
         }
 
         private void btnOdd_Click(object sender, EventArgs e)
         {
-            if (大小單雙.Items.Contains("雙"))
+            if (大小單雙.Items.Contains('雙'))
             {
                 MessageBox.Show("已下注 \'雙\' ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -224,13 +233,13 @@ namespace BingoBingo
             {
                 int newTotal = TotalCost();
                 lblTotalCost.Text = newTotal.ToString("C");
-                大小單雙.Items.Add("單");
+                大小單雙.Items.Add('單');
             }
         }
 
         private void btnEven_Click(object sender, EventArgs e)
         {
-            if (大小單雙.Items.Contains("單"))
+            if (大小單雙.Items.Contains('單'))
             {
                 MessageBox.Show("已下注 \'單\' ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -238,13 +247,32 @@ namespace BingoBingo
             {
                 int newTotal = TotalCost();
                 lblTotalCost.Text = newTotal.ToString("C");
-                大小單雙.Items.Add("雙");
+                大小單雙.Items.Add('雙');
             }
         }
 
         private void btnDetele3_Click(object sender, EventArgs e)
         {
             大小單雙.Items.Clear();
+        }
+
+        private void btnSelectNum_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNum.Text))
+            {
+                txtNum.Text = "";
+            }
+            if (txtNum.Text.Length > 36 && !string.IsNullOrWhiteSpace(txtNum.Text))
+            {
+                MessageBox.Show("超過投注上限號碼", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Random random = new Random();
+                int num = random.Next(1, 81);
+                string newNum = num.ToString("D2");
+                txtNum.Text += $"{newNum}, ";
+            }
         }
     }
 }
