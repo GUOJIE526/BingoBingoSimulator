@@ -98,6 +98,9 @@
             this.btnSelectNum = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtNum = new System.Windows.Forms.Label();
             this.lblWin = new System.Windows.Forms.Label();
+            this.btnSuperNum = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -473,6 +476,7 @@
             this.guna2GroupBox1.BackColor = System.Drawing.Color.White;
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.BorderRadius = 20;
+            this.guna2GroupBox1.Controls.Add(this.btnSuperNum);
             this.guna2GroupBox1.Controls.Add(this.btnDetele3);
             this.guna2GroupBox1.Controls.Add(this.大小單雙);
             this.guna2GroupBox1.Controls.Add(this.btnOdd);
@@ -486,7 +490,7 @@
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(258, 200);
             this.guna2GroupBox1.TabIndex = 28;
-            this.guna2GroupBox1.Text = "猜大小、猜單雙";
+            this.guna2GroupBox1.Text = "猜大小、猜單雙、超級獎號";
             // 
             // btnDetele3
             // 
@@ -1016,12 +1020,55 @@
             this.lblWin.Size = new System.Drawing.Size(488, 139);
             this.lblWin.TabIndex = 62;
             // 
+            // btnSuperNum
+            // 
+            this.btnSuperNum.BorderRadius = 15;
+            this.btnSuperNum.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuperNum.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuperNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuperNum.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuperNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSuperNum.FillColor = System.Drawing.Color.Firebrick;
+            this.btnSuperNum.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSuperNum.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnSuperNum.ForeColor = System.Drawing.Color.White;
+            this.btnSuperNum.Location = new System.Drawing.Point(142, 145);
+            this.btnSuperNum.Name = "btnSuperNum";
+            this.btnSuperNum.Size = new System.Drawing.Size(104, 52);
+            this.btnSuperNum.TabIndex = 60;
+            this.btnSuperNum.Text = "超級獎號";
+            this.btnSuperNum.Click += new System.EventHandler(this.btnSuperNum_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("標楷體", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(1072, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(163, 35);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "小賭怡情";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("標楷體", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(1072, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(163, 35);
+            this.label4.TabIndex = 64;
+            this.label4.Text = "大賭傷身";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1281, 689);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblWin);
             this.Controls.Add(this.txtNum);
             this.Controls.Add(this.btnSelectNum);
@@ -1164,6 +1211,9 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnSelectNum;
         private System.Windows.Forms.Label txtNum;
         private System.Windows.Forms.Label lblWin;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSuperNum;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

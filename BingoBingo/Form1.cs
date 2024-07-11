@@ -179,6 +179,8 @@ namespace BingoBingo
             {
                 lblOddEven.Text = "一";
             }
+            //兌獎
+            
         }
 
         private void btnDelete2_Click(object sender, EventArgs e)
@@ -193,6 +195,7 @@ namespace BingoBingo
                 listNums[i].Text = "";
             }
             lbl20.BackColor = Color.LightBlue;
+            大小單雙.Items.Clear();
         }
 
         private void btnBig_Click(object sender, EventArgs e)
@@ -273,6 +276,15 @@ namespace BingoBingo
                 string newNum = num.ToString("D2");
                 txtNum.Text += $"{newNum}, ";
             }
+        }
+
+        private void btnSuperNum_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int supernum = random.Next(1, 81);
+            大小單雙.Items.Add(supernum);
+            int newTotal = TotalCost();
+            lblTotalCost.Text = newTotal.ToString("C");
         }
     }
 }
